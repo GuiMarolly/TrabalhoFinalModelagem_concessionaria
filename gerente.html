@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Gestor - AutoGestor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">AutoGestor [Área Restrita]</div>
+        <nav>
+            <a href="login.html" id="logout-btn">Sair</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Dashboard Gerencial</h1>
+        <section class="metrics-gerente">
+            <div class="card">
+                <h3>Total Vendido</h3>
+                <p id="total-vendido">R$ 0,00</p>
+            </div>
+            <div class="card">
+                <h3>Propostas Pendentes</h3>
+                <p id="propostas-pendentes">0</p>
+            </div>
+            <div class="card">
+                <h3>Carros Vendidos</h3>
+                <p id="carros-vendidos">0</p>
+            </div>
+            <div class="card">
+                <h3>Carro Mais Vendido</h3>
+                <p id="carro-mais-vendido">-</p>
+            </div>
+        </section>
+        <section class="charts-gerente">
+            <div class="card chart-container">
+                <h3>Vendas por Modelo</h3>
+                <canvas id="vendas-modelo-chart"></canvas>
+            </div>
+        </section>
+        <section class="card">
+            <h2>Propostas para Análise</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cliente</th>
+                            <th>Veículo</th>
+                            <th>Valor (R$)</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="propostas-table-body"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Gerenciamento de Estoque de Veículos</h2>
+            <button id="show-add-car-form-btn" class="btn-add-new">Adicionar Novo Veículo</button>
+            <form id="car-form" class="hidden">
+                <input type="hidden" id="car-id">
+                <input type="text" id="car-modelo" placeholder="Modelo do Veículo" required>
+                <input type="text" id="car-marca" placeholder="Marca" required>
+                <input type="number" id="car-ano" placeholder="Ano" required>
+                <input type="number" id="car-valor" placeholder="Valor" required>
+                <input type="number" id="car-quantidade" placeholder="Quantidade em Estoque" required>
+                <input type="url" id="car-imagem" placeholder="URL da Imagem" required>
+                <div class="form-actions">
+                    <button type="submit" id="save-car-btn">Adicionar Veículo</button>
+                    <button type="button" id="cancel-car-btn">Cancelar</button>
+                </div>
+            </form>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Modelo</th>
+                            <th>Marca</th>
+                            <th>Ano</th>
+                            <th>Valor (R$)</th>
+                            <th>Qtd.</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stock-table-body"></tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+    <script src="script_gerente.js"></script>
+</body>
+</html>

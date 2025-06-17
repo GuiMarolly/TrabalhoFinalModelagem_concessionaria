@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta - AutoGestor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">AutoGestor</div>
+        <nav>
+            <a href="index.html">Nossos Veículos</a>
+            <a href="cliente.html" class="active">Minha Conta</a>
+        </nav>
+        <div id="user-info" class="user-info"></div>
+    </header>
+    <main>
+        <h1>Minha Conta</h1>
+        <section class="card profile-card">
+            <h2>Olá, <span id="cliente-nome"></span>!</h2>
+            <p>Seu saldo atual é de:</p>
+            <p class="saldo" id="cliente-saldo">R$ 0,00</p>
+            <form id="add-credito-form">
+                <input type="number" id="credito-valor" placeholder="Valor a adicionar" min="1" required>
+                <button type="submit">Adicionar Crédito</button>
+            </form>
+        </section>
+        <section class="card">
+            <h2>Meu Histórico de Propostas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Proposta</th>
+                        <th>Veículo</th>
+                        <th>Valor (R$)</th>
+                        <th>Status / Motivo</th>
+                    </tr>
+                </thead>
+                <tbody id="propostas-history-body">
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script_cliente.js"></script>
+</body>
+</html>

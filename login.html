@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AutoGestor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+    <main class="login-split-container">
+        
+        <div class="form-wrapper">
+            <h2>Login</h2>
+            <p>Acesse sua conta ou a área do gestor.</p>
+            <form id="login-form">
+                <input type="text" id="login-usuario" placeholder="Usuário" required>
+                <input type="password" id="login-senha" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+                <p id="login-error" class="error-message"></p>
+            </form>
+        </div>
+
+        <div class="form-wrapper">
+            <h2>Registro Rápido de Cliente</h2>
+            <p>Ainda não tem conta? Crie uma agora.</p>
+            <form id="register-form">
+                <input type="text" id="reg-nome" placeholder="Nome" required>
+                <input type="text" id="reg-sobrenome" placeholder="Sobrenome" required>
+                <input type="text" id="reg-usuario" placeholder="Crie um nome de usuário" required>
+                <input type="password" id="reg-senha" placeholder="Crie uma senha" required>
+                <button type="submit">Registrar</button>
+                <p id="register-message" class="success-message"></p>
+            </form>
+        </div>
+
+    </main>
+    <script src="auth.js"></script>
+</body>
+</html>

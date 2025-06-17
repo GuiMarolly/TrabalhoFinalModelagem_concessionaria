@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Root - Gerenciamento de Usuários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">AutoGestor [ROOT]</div>
+        <nav>
+            <a href="login.html" id="logout-btn">Sair</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Gerenciamento de Usuários</h1>
+        <section class="card">
+            <h2>Clientes Registrados</h2>
+            <p>Atenção: A remoção de um usuário é permanente e apagará seu acesso e saldo.</p>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome Completo</th>
+                            <th>Usuário</th>
+                            <th>Saldo (R$)</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-list-body">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="script_root.js"></script>
+</body>
+</html>
